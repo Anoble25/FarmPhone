@@ -9,14 +9,13 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.title}>Farm Phone</Text>
         <View style={styles.row1}>
+          //Cat Button
           <TouchableOpacity style={styles.buttonStyles} 
             onPress={async() => {
-            
-              
               try {
                 await Audio.setIsEnabledAsync(true);
                 const sound = new Audio.Sound();
-                await sound.loadAsync(require('./assets/moo.wav'));
+                await sound.loadAsync(require('./assets/sounds/cat.wav'));
                 await sound.playAsync();
               } catch(error){
                 console.error(error);
@@ -26,47 +25,135 @@ export default class App extends React.Component {
               <Text style={styles.buttonText}> 1 </Text>
             </ImageBackground>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          //Pig Button
+          <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/pig.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/pig.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 2 </Text>
             </ImageBackground>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          //Cow Button
+          <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/cow.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/cow.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 3 </Text>
             </ImageBackground>
           </TouchableOpacity>
         </View>
         <View style={styles.row2}>
-        <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+        //Horse Button
+        <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/horse.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/horse.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 4 </Text>
             </ImageBackground>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          //Goat Button
+          <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/goat.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/goat.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 5 </Text>
             </ImageBackground>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          //Dog Button
+          <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/dog.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/dog.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 6 </Text>
             </ImageBackground>
           </TouchableOpacity>
         </View>
         <View style={styles.row3}>
-        <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+        //Rooster Button
+        <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/rooster.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/rooster.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 7 </Text>
             </ImageBackground>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          //Sheep Button
+          <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/sheep.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/sheep.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 8 </Text>
             </ImageBackground>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+          //Cat Button
+          <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(require('./assets/sounds/goose.wav'));
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
+            <ImageBackground style={styles.catImage} source={require("./assets/img/goose.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 9 </Text>
             </ImageBackground>
           </TouchableOpacity>
