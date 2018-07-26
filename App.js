@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native';
 
 export default class App extends React.Component {
   render() {
@@ -7,8 +7,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.title}>Farm Phone</Text>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <Text style={styles.buttonText}> 1 </Text>
+          <TouchableOpacity style={styles.catButton} onPress={this.onPress}>
+            <Image style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="contain" />
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
             <Text style={styles.buttonText}> 2 </Text>
@@ -52,6 +52,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     //justifyContent: 'center',
+  },
+  catButton:{
+    flex:1,
+    width:'50%',
+    height:'50%',
+    flexShrink:1,    
+  },
+  catImage:{
+    flex:1, 
+    height: undefined, 
+    width: undefined,
   },
   title: {
     fontSize: 70,
