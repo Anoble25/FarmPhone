@@ -9,19 +9,19 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.title}>Farm Phone</Text>
         <View style={styles.row1}>
-          //Cat Button
+          //Dog Button
           <TouchableOpacity style={styles.buttonStyles} 
             onPress={async() => {
               try {
                 await Audio.setIsEnabledAsync(true);
                 const sound = new Audio.Sound();
-                await sound.loadAsync(require('./assets/sounds/cat.wav'));
+                await sound.loadAsync(require('./assets/sounds/dog.wav'));
                 await sound.playAsync();
               } catch(error){
                 console.error(error);
               }
             }}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/dog.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 1 </Text>
             </ImageBackground>
           </TouchableOpacity>
@@ -91,19 +91,19 @@ export default class App extends React.Component {
               <Text style={styles.buttonText}> 5 </Text>
             </ImageBackground>
           </TouchableOpacity>
-          //Dog Button
+          //Cat Button
           <TouchableOpacity style={styles.buttonStyles} 
             onPress={async() => {
               try {
                 await Audio.setIsEnabledAsync(true);
                 const sound = new Audio.Sound();
-                await sound.loadAsync(require('./assets/sounds/dog.wav'));
+                await sound.loadAsync(require('./assets/sounds/cat.wav'));
                 await sound.playAsync();
               } catch(error){
                 console.error(error);
               }
             }}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/dog.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 6 </Text>
             </ImageBackground>
           </TouchableOpacity>
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   container: {
     flexWrap:'nowrap',
     flex: 1,
-    paddingTop: 40,
+    paddingTop: 20,
     backgroundColor: '#35605a',
     alignItems: 'center',
     //justifyContent: 'center',
@@ -180,30 +180,50 @@ const styles = StyleSheet.create({
     width: 110,
   },
   title: {
-    fontSize: 70,
+    fontSize:70,
+    color: '#ffffff',
+    textShadowColor: 'rgba(0, 205, 0, 100)',
+    textShadowOffset: {width: -1, height: 3},
+    textShadowRadius: 10,
+    //borderBottomWidth: 10,
+    //borderBottomColor: '#000000', 
+    shadowColor: 'rgba(0, 200, 0, 100)',
+    shadowOffset: {width: -1, height: 6},
+    shadowOpacity: 1,
+    shadowRadius: 10,
+    
   },
   row1: {
     flexDirection: 'row',
     flexGrow: 1,
     alignItems:'flex-start',
+    borderColor: '#ffffff',
+    borderTopWidth: 3,
+    shadowColor: 'rgba(0, 255, 0, 100)',
+    shadowOffset: {width: -1, height: 3},
+    shadowOpacity: .5,
+    shadowRadius: 10,
+    
+
   },
   row2: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems:'flex-start',
+    shadowColor: 'rgba(0, 255, 0, 100)',
+    shadowOffset: {width: -1, height: 3},
+    shadowOpacity: 1,
+    shadowRadius: 10,
   },
   row3: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems:'flex-start',
+    shadowColor: 'rgba(0, 255, 0, 100)',
+    shadowOffset: {width: -1, height: 3},
+    shadowOpacity: 1,
+    shadowRadius: 10,
   },
-  // buttonRow: {
-  //   flex:1,
-  //   // flexDirection: 'row',
-  //   //alignItems: 'flex-start',
-  //   //borderColor: '#ffffff',
-  //   borderBottomWidth: 1
-  // },
   buttonStyles:{
     flexGrow: 1,
     backgroundColor: '#35605a',
@@ -211,9 +231,17 @@ const styles = StyleSheet.create({
     height: undefined,
     //justifyContent: 'center',
     alignItems: 'center',
+    
   },
   buttonText:{
     color: '#ffffff',
-    fontSize: 130
+    fontSize: 90,
+    alignSelf: 'center',
+    paddingTop: 70,
+  
+    textShadowColor: 'rgba(0, 255, 0, 100)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10
+
   }
 });
