@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Image, ImageBackground, Text, View, TouchableOpacity } from 'react-native';
 
+
+
 export default class App extends React.Component {
   render() {
     return (
