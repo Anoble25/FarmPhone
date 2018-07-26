@@ -11,14 +11,12 @@ export default class App extends React.Component {
         <View style={styles.row1}>
           <TouchableOpacity style={styles.buttonStyles} 
             onPress={async() => {
-              const source = {
-                uri: 'http://www.slspencer.com/Sounds/Chewbacca/Chewie3.mp3'
-              };
+            
               
               try {
                 await Audio.setIsEnabledAsync(true);
                 const sound = new Audio.Sound();
-                await sound.loadAsync(source);
+                await sound.loadAsync(require('./assets/moo.wav'));
                 await sound.playAsync();
               } catch(error){
                 console.error(error);
