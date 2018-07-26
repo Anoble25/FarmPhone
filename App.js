@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Image, ImageBackground, Text, View, TouchableOpacity } from 'react-native';
-
+import { Constants, Audio} from 'expo';
 
 
 export default class App extends React.Component {
@@ -9,7 +9,21 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.title}>Farm Phone</Text>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          <TouchableOpacity style={styles.buttonStyles} 
+            onPress={async() => {
+              const source = {
+                uri: 'http://www.slspencer.com/Sounds/Chewbacca/Chewie3.mp3'
+              };
+              
+              try {
+                await Audio.setIsEnabledAsync(true);
+                const sound = new Audio.Sound();
+                await sound.loadAsync(source);
+                await sound.playAsync();
+              } catch(error){
+                console.error(error);
+              }
+            }}>
             <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 1 </Text>
             </ImageBackground>
