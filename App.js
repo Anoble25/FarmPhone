@@ -13,41 +13,41 @@ export default class App extends React.Component {
             </ImageBackground>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/pig.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 2 </Text>
             </ImageBackground>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/cow.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 3 </Text>
             </ImageBackground>
           </TouchableOpacity>
         </View>
         <View style={styles.row2}>
         <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/horse.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 4 </Text>
             </ImageBackground>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/goat.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 5 </Text>
             </ImageBackground>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/dog.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 6 </Text>
             </ImageBackground>
           </TouchableOpacity>
         </View>
         <View style={styles.row3}>
         <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/rooster.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 7 </Text>
             </ImageBackground>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-            <ImageBackground style={styles.catImage} source={require("./assets/img/cat.png")} resizeMode="stretch">
+            <ImageBackground style={styles.catImage} source={require("./assets/img/sheep.png")} resizeMode="stretch">
               <Text style={styles.buttonText}> 8 </Text>
             </ImageBackground>
           </TouchableOpacity>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     flexWrap:'nowrap',
     flex: 1,
     paddingTop: 40,
-    backgroundColor: '#fff',
+    backgroundColor: '#35605a',
     alignItems: 'center',
     //justifyContent: 'center',
   },
