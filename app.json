@@ -1,5 +1,13 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "Farm Phone",
+    "description": "An app that plays farm sounds",
+    "slug": "farm-phone",
+    "sdkVersion": "27.0.0",
+    "privacy": "public",
+    "icon": "assets/img/cat.png",
+    "ios": {
+      "bundleIdentifier": "com.farm.farm-phone"
+    }
   }
 }
